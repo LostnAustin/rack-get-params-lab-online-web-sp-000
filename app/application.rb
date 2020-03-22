@@ -10,22 +10,22 @@ class Application
 
     if req.path.match(/items/)
       @@items.each do |item|
-        resp.write "#{item}\n"
-    end
-      elsif req.path.match(/search/)
+      resp.write "#{item}\n"
+      end
+    elsif req.path.match(/search/)
         search_term = req.params["q"]
         resp.write handle_search(search_term)
 
-      elsif req.path.match(/cart/)
+    elsif req.path.match(/cart/)
           if @@cart.count == 0
               resp.write "Your cart is empty"
           elsif @@cart.count != 0
-            @@cart.each do |i|
-            resp.write "#{i}\n"
+              @@cart.each do |i|
+              resp.write "#{i}\n"
+              end
           end
 
-
-      elsif req.path.match(/add/)
+    elsif req.path.match(/add/)
 binding.pry
           item = req.params["item"]
         if @@items.include?(item)
