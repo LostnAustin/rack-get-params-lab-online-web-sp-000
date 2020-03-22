@@ -7,7 +7,7 @@ class Application
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
-binding.pry
+
     if req.path.match(/items/)
       @@items.each do |item|
         resp.write "#{item}\n"
@@ -26,7 +26,7 @@ binding.pry
 
 
       elsif req.path.match(/add/)
-
+binding.pry
           item = req.params["item"]
         if @@items.include?(item)
           @@cart << item
