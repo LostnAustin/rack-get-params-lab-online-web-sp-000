@@ -34,7 +34,7 @@ binding.pry
           resp.write "Error"
         end
       else
-          resp.write "Path Not Found"
+          resp.write "We don't have that item"
       end
         resp.finish
     end
