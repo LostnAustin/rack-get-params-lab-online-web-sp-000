@@ -30,7 +30,7 @@ binding.pry
           item = req.params["item"]
         if @@items.include?(item)
           @@cart << item
-          resp.write "#{item}"
+          resp.write "added #{item}"
         else nil || !@@items.include?(item)
           resp.write "Error"
         end
