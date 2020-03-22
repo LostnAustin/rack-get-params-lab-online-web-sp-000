@@ -30,6 +30,7 @@ binding.pry
           item = req.params["item"]
         if @@items.include?(item)
           @@cart << item
+          resp.write "#{added Figs}"
         else nil || !@@items.include?(item)
           resp.write "Error"
         end
