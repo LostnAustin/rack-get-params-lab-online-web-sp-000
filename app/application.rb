@@ -29,7 +29,7 @@ binding.pry
 
           item = req.params["item"]
         if @@items.include?(item)
-          resp.write("item")
+          @@cart << item
         else nil || !@@items.include?(item)
           resp.write "Error"
         end
