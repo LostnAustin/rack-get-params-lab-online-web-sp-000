@@ -30,12 +30,13 @@ binding.pry
           item = req.params["item"]
         if @@items.include?(item)
           @@cart << item
-          resp.write "added #{item}"
+          resp.write "add #{item}"
+          
         else nil || !@@items.include?(item)
-          resp.write "Error"
+          resp.write "We don't have that item"
         end
       else
-          resp.write "We don't have that item"
+          resp.write "Path Not Found"
       end
         resp.finish
     end
