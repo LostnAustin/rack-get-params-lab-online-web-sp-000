@@ -30,7 +30,7 @@ class Application
           item = req.params["item"]
         if @@items.include?(item)
           @@cart << item
-          resp.write "add #{item}"
+          resp.write "added #{item}"
 
         else nil || !@@items.include?(item)
           resp.write "We don't have that item"
