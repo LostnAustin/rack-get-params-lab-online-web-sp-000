@@ -31,7 +31,7 @@ binding.pry
         if @@items.include?(item)
           @@cart << item
           resp.write "add #{item}"
-          
+
         else nil || !@@items.include?(item)
           resp.write "We don't have that item"
         end
