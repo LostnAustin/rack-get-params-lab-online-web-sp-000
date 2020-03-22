@@ -40,7 +40,7 @@ binding.pry
       end
         resp.finish
     end
-end
+
 # resp.write("#{item}")
 # @@cart << search_term
 
